@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- 
+    <script src="src/script.js"></script> -->
+    <title>protect your vision</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <div class="header__content">
+          <nav class="menu">
+            <!-- <div class="menu__logo">
+              <a class="menu__link" href="#"><h1>protect your vision</h1></a>
+            </div> -->
+            <h1>protect your vision</h1>
+            <ul class="menu__list">
+              <li class="menu__item is-active">
+                <a data-switcher data-tab="1" class="menu__link" href="#"
+                  >Day/Night</a
+                >
+              </li>
+              <li class="menu__item">
+                <a data-switcher data-tab="2" class="menu__link" href="#"
+                  >Aurora</a
+                >
+              </li>
+              <li class="menu__item">
+                <a data-switcher data-tab="3" class="menu__link" href="#"
+                  >Beach</a
+                >
+              </li>
+              <!-- <li class="menu__item">
+                <a data-switcher data-tab="4" class="menu__link" href="#"
+                  >Under the tree</a
+                >
+              </li> -->
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="main">
+          <div class="avatar">
+            <img
+              class="avatar__image"
+              src="images/woman-in-glasses-sitting.png"
+              alt=""
+            />
+          </div>
+          <div class="main__pages">
+            <div class="main__page is-active" data-page="1"></div>
+            <div class="main__page main__page--aurora" data-page="2">
+              <div class="image-container">
+                <img class="main__image" src="images/aurora.jpg" alt="" />
+              </div>
+            </div>
+            <div class="main__page main__page--beach" data-page="3">
+              <div class="image-container">
+                <img class="main__image" src="images/beach.jpg" alt="" />
+              </div>
+            </div>
+            <!-- <div class="main__page" data-page="4">
+              <img src="images/tree.png" alt="" />
+            </div> -->
+          </div>
+        </div>
+        <form action="">
+          <div class="timer">
+            <div class="timer__time">
+              <input
+                type="text"
+                class="timer__countdown"
+                name="timerDisplay"
+                value="0:00"
+              />
+            </div>
+            <div class="timer__clear">
+              <input
+                type="button"
+                class="timer__cleartime"
+                name="clearTime"
+                value="clear time"
+                onClick="stopTimer()"
+              />
+              <input
+                type="button"
+                class="timer__stop"
+                name="stopAudio"
+                value="stop music"
+              />
+            </div>
+            <div class="timer__settime">
+              <h4>Set time:</h4>
+            </div>
+            <div class="timer__buttons">
+              <input
+                type="button"
+                class="timer__btn"
+                name="startTime"
+                value="1 minute"
+                onClick="startTimer1()"
+              />
+              <input
+                type="button"
+                class="timer__btn"
+                name="startTime"
+                value="20 minutes"
+                onClick="startTimer2()"
+              />
+              <input
+                type="button"
+                class="timer__btn"
+                name="startTime"
+                value="40 minutes"
+                onClick="startTimer3()"
+              />
+              <input
+                type="button"
+                class="timer__btn"
+                name="startTime"
+                value="60 minutes"
+                onClick="startTimer4()"
+              />
+              <!-- <div class="toggle__btn" id="toggle-btn-checkbox">
+                <input type="checkbox" />
+                <span></span>
+              </div> -->
+            </div>
+            <div class="toggle__btn" id="toggle-btn-checkbox">
+              <input type="checkbox" />
+              <span></span>
+            </div>
+            <!-- <div class="stop"></div> -->
+          </div>
+        </form>
+
+        <audio
+          id="music"
+          src="./audio/chill.mp3"
+          class="audio"
+          loop="loop"
+          preload="auto"
+        ></audio>
+        <!-- <section class="toggle">
+          <div class="toggle__btn" id="toggle-btn-checkbox">
+            <input type="checkbox" />
+            <span></span>
+          </div>
+        </section> -->
+      </main>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
