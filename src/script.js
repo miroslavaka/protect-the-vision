@@ -180,6 +180,21 @@ function stopTimer() {
   running = false;
   document.forms[0].timerDisplay.value = '0:00';
 }
+//--------------------------------------------------------
+let isPlaying = false;
+let stop = document.querySelector('.timer__stop');
+
+myAudio.onplaying = function () {
+  isPlaying = true;
+};
+myAudio.onpause = function () {
+  isPlaying = false;
+};
+stop.addEventListener('click', togglePlay);
+
+function togglePlay() {
+  isPlaying === true ? myAudio.pause() : myAudio.play();
+}
 
 //////////////////////////////////////////////////////////////
 function toggleDayNight() {

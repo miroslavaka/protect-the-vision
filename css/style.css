@@ -41,7 +41,6 @@ body {
 .menu__link {
   text-decoration: none;
   color: #2c3e50;
-  /*color: black;*/
 }
 
 .avatar {
@@ -59,7 +58,7 @@ body {
 }
 @media screen and (min-width: 490px) {
   .avatar__image {
-    width: 350px;
+    width: 300px;
   }
 }
 
@@ -75,12 +74,14 @@ body {
 }
 
 .is-active a {
-  color: white;
+  color: #fff;
 }
 
 .image-container img {
-  max-width: 100%;
-  height: auto;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
 }
 
 .main__page {
@@ -132,8 +133,8 @@ body {
   }
 }
 .timer__buttons {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 @media screen and (min-width: 490px) {
   .timer__buttons {
@@ -156,13 +157,13 @@ body {
   font-weight: 400;
   line-height: 1;
   margin: 0.8rem;
-  padding: 1rem 1.8em;
+  padding: 0.9rem 1.3rem;
   outline: 0;
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 @media screen and (min-width: 490px) {
   .timer__btn, .timer__cleartime, .timer__stop {
-    padding: 1rem 2.8em;
+    padding: 1rem 2.6em;
   }
 }
 .timer__btn:hover, .timer__cleartime:hover, .timer__stop:hover {
@@ -184,6 +185,7 @@ body {
   color: #fff;
   text-align: center;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .toggle__btn {
