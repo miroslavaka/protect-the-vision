@@ -97,14 +97,14 @@ body {
   }
   &__buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     @media screen and (min-width: 490px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
     @media screen and (min-width: 980px) {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   &__btn,

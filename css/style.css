@@ -129,7 +129,7 @@ body {
 }
 .timer__buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 @media screen and (min-width: 490px) {
   .timer__buttons {
@@ -140,7 +140,7 @@ body {
 @media screen and (min-width: 980px) {
   .timer__buttons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .timer__btn, .timer__cleartime, .timer__stop {
