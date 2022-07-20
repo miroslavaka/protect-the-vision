@@ -1,10 +1,8 @@
 @use 'colors';
 @use 'menu';
 
-html {
-  background-color: colors.$color-primary-1;
-}
 body {
+  background-color: colors.$color-primary-1;
   margin: 0;
   line-height: 1.5;
   font-size: 1.1rem;
@@ -32,7 +30,7 @@ body {
   display: block;
   height: 1px;
   left: 50%;
-  background: colors.$color-buttons;
+  background-color: colors.$color-buttons;
 }
 .image-container img {
   background-position: center center;
@@ -68,7 +66,6 @@ body {
     text-align: center;
     font-size: 1.5rem;
     padding: 0.5rem 0;
-
     @media screen and (min-width: 490px) {
       font-size: 2rem;
     }
@@ -82,7 +79,6 @@ body {
   &__clear {
     margin-left: auto;
     margin-right: auto;
-
     @media screen and (min-width: 490px) {
       display: flex;
       justify-content: center;
@@ -118,7 +114,6 @@ body {
   &__stop:hover {
     box-shadow: 0 0 40px 40px colors.$color-buttons inset;
     color: colors.$color-white;
-    outline: 0;
   }
   &__countdown {
     background-color: transparent;

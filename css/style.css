@@ -30,11 +30,8 @@
   color: #2c3e50;
 }
 
-html {
-  background-color: #2c3e50;
-}
-
 body {
+  background-color: #2c3e50;
   margin: 0;
   line-height: 1.5;
   font-size: 1.1rem;
@@ -67,7 +64,7 @@ body {
   display: block;
   height: 1px;
   left: 50%;
-  background: #e74c3c;
+  background-color: #e74c3c;
 }
 
 .image-container img {
@@ -156,7 +153,6 @@ body {
 .timer__btn:hover, .timer__cleartime:hover, .timer__stop:hover {
   box-shadow: 0 0 40px 40px #e74c3c inset;
   color: #ffffff;
-  outline: 0;
 }
 .timer__countdown {
   background-color: transparent;
