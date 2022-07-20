@@ -1,5 +1,8 @@
+@use 'colors';
+@use 'menu';
+
 html {
-  background-color: #2c3e50;
+  background-color: colors.$color-primary-1;
 }
 body {
   margin: 0;
@@ -7,36 +10,7 @@ body {
   font-size: 1.1rem;
 }
 .daylight {
-  background-color: #d9d9d9;
-}
-.menu {
-  background-color: white;
-  opacity: 0.8;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-  h1 {
-    margin: 0;
-    text-align: center;
-    color: #2c3e50;
-  }
-  @media screen and (min-width: 490px) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 8px;
-  }
-  &__item {
-    list-style-type: none;
-    padding: 0 0.7rem;
-  }
-  &__link {
-    text-decoration: none;
-    color: #2c3e50;
-  }
+  background-color: colors.$color-primary-2;
 }
 
 .avatar {
@@ -55,17 +29,15 @@ body {
   }
 }
 .is-active {
-  background-color: #e74c3c;
+}
 
-  border-radius: 0.3rem;
-}
-.is-active [data-page='1'],
-.is-active [data-page='2'],
-.is-active [data-page='3'] {
-  padding: 3px;
-}
-.is-active a {
-  color: #fff;
+.is-active a::after {
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 50%;
+  background: colors.$color-buttons;
 }
 .image-container img {
   background-position: center center;
@@ -139,9 +111,9 @@ body {
   &__cleartime,
   &__stop {
     background-color: transparent;
-    border: 2px solid #e74c3c;
+    border: 2px solid colors.$color-buttons;
     border-radius: 0.3rem;
-    color: #e74c3c;
+    color: colors.$color-buttons;
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 1;
@@ -156,23 +128,23 @@ body {
   &__btn:hover,
   &__cleartime:hover,
   &__stop:hover {
-    box-shadow: 0 0 40px 40px #e74c3c inset;
-    color: #fff;
+    box-shadow: 0 0 40px 40px colors.$color-buttons inset;
+    color: colors.$color-white;
     outline: 0;
   }
   &__countdown {
     background-color: transparent;
     outline: none;
-    border: 2px solid #e74c3c;
+    border: 2px solid colors.$color-buttons;
     border-radius: 0.3rem;
-    color: #e74c3c;
+    color: colors.$color-buttons;
     font-weight: 400;
     line-height: 1;
     margin: 15px;
   }
   &__settime {
     h4 {
-      color: #fff;
+      color: colors.$color-white;
       text-align: center;
       margin-bottom: 0;
       margin-top: 0;
@@ -200,8 +172,8 @@ body {
       left: 0px;
       overflow: hidden;
       opacity: 1;
-      background-color: #fff;
-      box-shadow: 0px 1px 15px #d9d9d9;
+      background-color: colors.$color-white;
+      box-shadow: 0px 1px 15px colors.$color-primary-2;
       border-radius: 40px;
       transition: 0.2s ease background-color, 0.2s ease opacity;
     }
@@ -216,23 +188,23 @@ body {
       transition: 0.5s ease transform, 0.2s ease background-color;
     }
     span:before {
-      background-color: #fff;
+      background-color: colors.$color-white;
       transform: translate(-22px, 0px);
       z-index: 1;
     }
     span:after {
-      background-color: #000;
+      background-color: colors.$color-black;
       transform: translate(2px, 0px);
       z-index: 0;
     }
     input[type='checkbox']:checked + span {
-      background-color: #2c3e50;
+      background-color: colors.$color-primary-1;
     }
     input[type='checkbox']:active + span {
       opacity: 0.5;
     }
     input[type='checkbox']:checked + span:after {
-      background-color: #fff;
+      background-color: colors.$color-white;
       transform: translate(20px, 0px);
     }
   }
@@ -254,13 +226,13 @@ input[type='checkbox'] {
     transform: translatey(0px);
   }
   25% {
-    transform: translatex(10px);
+    transform: translatex(5px);
   }
   50% {
-    transform: translatey(-20px);
+    transform: translatey(-10px);
   }
   75% {
-    transform: translatex(-10px);
+    transform: translatex(-5px);
   }
   100% {
     transform: translatey(0px);
